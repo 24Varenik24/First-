@@ -1,0 +1,118 @@
+#slider {
+    background-color: aqua;
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+
+
+    display: flex;
+   
+    margin: 0 auto;
+    border: 10px solid black;
+
+
+}
+
+#slider-group {
+    width: 400%;
+    height: 600px;
+    position: relative;
+
+    display: inline-flex;
+
+}
+
+
+
+
+
+
+#item1,
+#item2,
+#item3,
+#item4 {
+    width: 100%;
+    height: inherit;
+    background-size: cover;
+}
+
+
+
+
+#slider-switch {
+    display: inline-flex;
+    margin: 0 auto;
+
+}
+
+#slider-switch input {
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+}
+
+
+#slider-radio1:checked~#slider-group {
+    margin-left: 0;
+    transition: 1s;
+
+}
+
+#slider-radio2:checked~#slider-group {
+    margin-left: -100%;
+    transition: 1s;
+}
+
+#slider-radio3:checked~#slider-group {
+    margin-left: -200%;
+    transition: 1s;
+}
+
+#slider-radio4:checked~#slider-group {
+    margin-left: -300%;
+    transition: 1s;
+}
+
+#slider-label {
+
+   
+    position: absolute;
+    width: 135px;
+    height: 15px;
+    column-gap: 5px;
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+#slider-label label {
+    background-color: black;
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    opacity: 0.5;
+    position: relative;
+    left: 430px;
+    top:550px
+
+}
+
+#slider input {
+    display: none;
+    cursor: pointer;
+}
+
+#slider label:hover{
+    opacity: 1;
+}
+#item1{
+    clip-path: ellipse(400px 300px at center);
+}
+#item2{
+    clip-path: polygon(0% 0%, 100% 0%,100% 100%);
+}
+#item3{
+    clip-path: inset(20px 20px 50px round 15px 0);/* слева сверху снизу уменьшает и округляет углы */
+}
+#item4{
+    clip-path: polygon(50% 0%, 58% 18%, 73% 6%, 72% 25%, 91% 22%, 81% 38%, 100% 44%, 83% 54%, 97% 68%, 77% 69%, 83% 87%, 65% 79%, 62% 99%, 50% 83%, 38% 99%, 35% 79%, 17% 87%, 23% 69%, 3% 68%, 17% 54%, 0% 44%, 19% 38%, 9% 22%, 28% 25%, 27% 6%, 42% 18%);
+}

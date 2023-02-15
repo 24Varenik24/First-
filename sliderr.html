@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider {
+            background-color: aqua;
+            width: 1000px;
+            height: 600px;
+            overflow: hidden;
+
+
+            display: flex;
+           
+            margin: 0 auto;
+            border: 10px solid black;
+
+
+        }
+
+        #slider-group {
+            width: 400%;
+            height: 600px;
+            position: relative;
+
+            display: inline-flex;
+
+        }
+
+
+
+
+
+
+        #item1,
+        #item2,
+        #item3,
+        #item4 {
+            width: 100%;
+            height: inherit;
+            background-size: cover;
+        }
+
+
+
+
+        #slider-switch {
+            display: inline-flex;
+            margin: 0 auto;
+
+        }
+
+        #slider-switch input {
+            width: 20px;
+            height: 20px;
+            margin: 6px;
+        }
+
+
+        #slider-radio1:checked~#slider-group {
+            margin-left: 0;
+            transition: 1s;
+
+        }
+
+        #slider-radio2:checked~#slider-group {
+            margin-left: -100%;
+            transition: 1s;
+        }
+
+        #slider-radio3:checked~#slider-group {
+            margin-left: -200%;
+            transition: 1s;
+        }
+
+        #slider-radio4:checked~#slider-group {
+            margin-left: -300%;
+            transition: 1s;
+        }
+
+        #slider-label {
+
+           
+            position: absolute;
+            width: 135px;
+            height: 15px;
+            column-gap: 5px;
+            display: inline-flex;
+            margin: 0 auto;
+        }
+
+        #slider-label label {
+            background-color: black;
+            width: 40px;
+            height: 15px;
+            border-radius: 10px;
+            opacity: 0.5;
+            position: relative;
+            left: 430px;
+            top:550px
+
+        }
+
+        #slider input {
+            display: none;
+            cursor: pointer;
+        }
+
+        #slider label:hover{
+            opacity: 1;
+        }
+        #item1{
+            clip-path: ellipse(400px 300px at center);
+        }
+        #item2{
+            clip-path: polygon(0% 0%, 100% 0%,100% 100%);
+        }
+        #item3{
+            clip-path: inset(20px 20px 50px round 15px 0);/* слева сверху снизу уменьшает и округляет углы */
+        }
+        #item4{
+            clip-path: polygon(50% 0%, 58% 18%, 73% 6%, 72% 25%, 91% 22%, 81% 38%, 100% 44%, 83% 54%, 97% 68%, 77% 69%, 83% 87%, 65% 79%, 62% 99%, 50% 83%, 38% 99%, 35% 79%, 17% 87%, 23% 69%, 3% 68%, 17% 54%, 0% 44%, 19% 38%, 9% 22%, 28% 25%, 27% 6%, 42% 18%);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+
+        <input type="radio" name="switch" id="slider-radio1">
+        <input type="radio" name="switch" id="slider-radio2">
+        <input type="radio" name="switch" id="slider-radio3">
+        <input type="radio" name="switch" id="slider-radio4">
+
+        <div id="slider-group">
+            <div id="item1"><img
+                    src="https://www.thissongslaps.com/wp-content/uploads/2017/06/garrett-parker-247225-1000x600.jpg"
+                    alt="">
+            </div>
+            <div id="item2"><img src="https://www.webalerts.in/wp-content/uploads/2022/01/you-are-my-angel-1000x600.jpg"
+                    alt="">
+            </div>
+            <div id="item3">
+                <img
+                    src="http://vremena-goda.su/uploads/photos/show/[1]_2_Apr_13_[2]_28_Jan_15/278_image_111.jpg"
+                    alt="">
+            </div>
+            <div id="item4">
+                <img src="https://www.iphon.fr/app/uploads/2020/01/macos-1000x600.jpg" alt="">
+            </div>
+
+
+        </div>
+
+
+        <div id="slider-label">
+            <label for="slider-radio1"></label>
+            <label for="slider-radio2"></label>
+            <label for="slider-radio3"></label>
+            <label for="slider-radio4"></label>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
